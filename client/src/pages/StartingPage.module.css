@@ -1,0 +1,70 @@
+/* StartingPage.module.css */
+
+.animatedTitle {
+    color: #FFFFFF; /* Using White for better contrast */
+    font-size: 50px !important;
+    font-weight: bold !important;
+    font-family: monospace;
+    letter-spacing: 7px !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-bottom: 16px; /* Adjusted margin-bottom */
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0%, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 30%) 100%);
+    background-size: 200% 100%; /* Double the size for smooth animation */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 6s forwards; /* Changed duration to 6s for a slower animation */
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100%; /* Start from the right */
+    }
+    100% {
+        background-position: 0%; /* Move to the left */
+    }
+}
+
+.shineColor {
+    color: #E1F5FE; /* Change to Light Cyan for shine effect */
+    -webkit-background-clip: initial; /* Reset background-clip */
+    -webkit-text-fill-color: initial; /* Reset text-fill color */
+    background: none; /* Remove background */
+}
+
+.paragraph {
+    position: relative;
+    color: #E0E0E0; /* Using Light Gray for p text */
+    font-weight: bold !important;
+    font-family: "Anonymous Pro", monospace !important;
+    letter-spacing: 7px !important;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    margin-top: 8px; /* Adjusted margin-top */
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+      blinkTextCursor 500ms infinite;
+    font-size: 23px;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 710px; /* Adjust width as necessary */
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: hsl(0, 0%, 80%);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+.customGradient {
+    background: linear-gradient(#CACCFC 0%, #7578BD 70%);
+}
